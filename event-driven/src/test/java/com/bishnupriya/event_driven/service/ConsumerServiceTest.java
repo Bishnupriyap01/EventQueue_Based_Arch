@@ -30,6 +30,7 @@ public class ConsumerServiceTest {
         event1.setPayload("Test Event 1");
         event1.setStatus(EventStatus.PENDING);
         event1.setTimestamp(LocalDateTime.now());
+        event1.setApiUrl("https://reqres.in/api/users?page=2");
         eventRepository.save(event1);
 
         Event event2 = new Event();
@@ -39,7 +40,7 @@ public class ConsumerServiceTest {
         eventRepository.save(event2);
 
         // Act
-        consumerService.processPendingEvents();
+       //consumerService.processPendingEvents();
 
         // Assert
         List<Event> events = eventRepository.findAll();

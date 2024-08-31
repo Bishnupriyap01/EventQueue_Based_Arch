@@ -21,6 +21,11 @@ public class Event {
     @Enumerated(EnumType.STRING)
     private EventStatus status;
 
+    private String apiUrl;
+
+    @Column(name = "status_message", columnDefinition = "TEXT")
+    private String statusMessage;
+
     private LocalDateTime timestamp;
 
 }
