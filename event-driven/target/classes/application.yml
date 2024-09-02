@@ -1,0 +1,2 @@
+api:
+  retryApiUrl: "https://reqres.in/api/users"
