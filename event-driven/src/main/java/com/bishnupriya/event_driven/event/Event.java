@@ -1,9 +1,7 @@
 package com.bishnupriya.event_driven.event;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -25,6 +23,14 @@ public class Event {
 
     @Column(name = "status_message", columnDefinition = "TEXT")
     private String statusMessage;
+
+    @Setter
+    @Getter
+    @Column(name = "retry_count")
+    private int retryCount = 0;
+
+    @Column
+    private LocalDateTime retryTimestamp;
 
     private LocalDateTime timestamp;
 

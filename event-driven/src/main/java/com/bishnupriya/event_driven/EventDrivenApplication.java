@@ -6,7 +6,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class EventDrivenApplication {
+public class  EventDrivenApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EventDrivenApplication.class, args);
